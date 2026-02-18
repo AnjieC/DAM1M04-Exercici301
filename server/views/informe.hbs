@@ -12,6 +12,36 @@
     </head>
     <body>
         {{> header}}
-        
+        <div>
+            <ul>
+                {{#each cities}}
+                    <li>
+                        {{name}}
+                        {{lookup ../countries country}}
+                        <span>
+                            {{#if population}}
+                                {{population}} habitantes
+                            {{else}}
+                                No existe población
+                            {{/if}}
+                        </span>
+                        <span>
+                            {{#if coastal}}
+                                🌊 Costanera
+                            {{else}}
+                                Interior
+                            {{/if}}
+                        </span>
+                        <span>
+                            {{#if (lte population 800000)}}
+                                Petita
+                            {{else}}
+                                Gran
+                            {{/if}}
+                        </span>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
     </body>
 </html>
