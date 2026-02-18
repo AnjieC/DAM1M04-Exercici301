@@ -31,7 +31,7 @@ hbs.registerPartials(path.join(__dirname, 'views', 'partials'));
 // Route
 app.get('/', (req, res) => {
   const common = JSON.parse(
-    fs.readFileSync(path.join(__dirname, 'data', 'common.json'), 'utf8')
+    fs.readFileSync(path.join(__dirname, 'data', 'site.json'), 'utf8')
   );
 
   data = {
@@ -41,11 +41,11 @@ app.get('/', (req, res) => {
   res.render('index', data);
 });
 
-app.get('/cities', (req, res) => {
+app.get('/informe', (req, res) => {
 
   // Legim els fitxers JSON
   const common = JSON.parse(
-    fs.readFileSync(path.join(__dirname, 'data', 'common.json'), 'utf8')
+    fs.readFileSync(path.join(__dirname, 'data', 'site.json'), 'utf8')
   );
   const cities = JSON.parse(
     fs.readFileSync(path.join(__dirname, 'data', 'cities.json'), 'utf8')
@@ -62,13 +62,13 @@ app.get('/cities', (req, res) => {
   }
 
   // Renderitza la plantilla cities.hbs
-  res.render('cities', data);
+  res.render('informe', data);
 });
 
 // Start server
 const httpServer = app.listen(port, () => {
   console.log(`http://localhost:${port}`);
-  console.log(`http://localhost:${port}/cities`);
+  console.log(`http://localhost:${port}/informe`);
 });
 
 // Graceful shutdown

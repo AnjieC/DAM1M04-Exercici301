@@ -1,9 +1,28 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    {{> header}}
-    <title>Principal</title>
-</head>
-<body>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="estils.css">
+        <!-- Fuente: Vend Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+        <title>Home</title>
+    </head>
+    <body>
+        {{> header}}
+        <div>
+            <h1>{{common.title}}</h1>
+            <h2>{{common.subtitle}}</h2>
+            <div>
+                <p>{{common.notice}}</p>
+            </div>
+            {{#if common.showWarning}}
+                <div>
+                    <p>Esto es un aviso</p>
+                </div>
+            {{/if}}
+        </div>
+    </body>
 </html>
