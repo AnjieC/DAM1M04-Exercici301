@@ -6,3 +6,71 @@ body{
     font-weight: 400;
     font-style: normal;
 }
+
+nav{
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: large;
+    margin-left: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a:hover{
+    color: yellow;
+    letter-spacing: 1.5px;
+}
+
+.contenido{
+    text-align: center;
+    padding-top: 60px;
+}
+
+ul{
+    display: inline-block;
+    text-align: left;
+}
+
+ul li{
+    margin-bottom: 10px;
+}
+
+span{
+    margin: 0 10px;
+    padding: 1px 4px;
+    border-radius: 11px;
+}
+
+.spanverde{
+    background-color: green;
+}
+
+.spanrojo{
+    background-color: red;
+}
+
+.spancoastal{
+    background-color: aqua;
+}
+
+.spaninterior{
+    background-color: yellow;
+}
+
+.spanpetita{
+    background-color: royalblue;
+}
+
+.spangran{
+    background-color: crimson;
+}
+
+.aviso{
+    margin: 40px 0;
+    color: tomato;
+}

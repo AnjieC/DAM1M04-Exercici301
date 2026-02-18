@@ -12,36 +12,33 @@
     </head>
     <body>
         {{> header}}
-        <div>
-            <ul>
-                {{#each cities}}
-                    <li>
-                        {{name}}
-                        {{lookup ../countries country}}
-                        <span>
+        <div class="contenido">
+            <div>
+                <h1>{{common.title}}</h1>
+                <ul>
+                    {{#each cities}}
+                        <li>
+                            <strong>{{name}}</strong>
+                            {{lookup ../countries country}}
                             {{#if population}}
-                                {{population}} habitantes
+                                <span class="spanverde">{{population}} habitantes</span>
                             {{else}}
-                                No existe población
+                                <span class="spanrojo">No existe población</span>
                             {{/if}}
-                        </span>
-                        <span>
                             {{#if coastal}}
-                                🌊 Costanera
+                                <span class="spancoastal">🌊 Costanera</span>
                             {{else}}
-                                Interior
+                                <span class="spaninterior">Interior</span>
                             {{/if}}
-                        </span>
-                        <span>
                             {{#if (lte population 800000)}}
-                                Petita
+                                <span class="spanpetita">Petita</span>
                             {{else}}
-                                Gran
+                                <span class="spangran">Gran</span>
                             {{/if}}
-                        </span>
-                    </li>
-                {{/each}}
-            </ul>
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
         </div>
     </body>
 </html>
